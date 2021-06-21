@@ -5,6 +5,8 @@ import os
 from env import host, user, password
 from pydataset import data
 from sklearn.preprocessing import MinMaxScaler
+from sklearn.impute import SimpleImputer
+
 # turn off pink warning boxes
 import warnings
 warnings.filterwarnings("ignore")
