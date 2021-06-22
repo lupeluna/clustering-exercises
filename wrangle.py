@@ -148,3 +148,16 @@ def prepare_zillow(df):
     df = impute(df, 'median', ['finishedsquarefeet12', 'lotsizesquarefeet', 'structuretaxvaluedollarcnt', 'taxvaluedollarcnt', 'landtaxvaluedollarcnt', 'taxamount'])
     
     return df
+
+
+
+def get_mall_data():
+    ''' acquire data from mall_customers database'''
+    
+    database = "mall_customers"
+
+    query = "select * from customers"
+
+    df = get_sql_data(database,query)
+    
+    return df
